@@ -1,4 +1,6 @@
+from dotenv import load_dotenv
 import os
+
 import streamlit as st
 import pickle
 import langchain
@@ -13,7 +15,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+load_dotenv()
 
 llm_endpoint = HuggingFaceEndpoint(
     repo_id="meta-llama/Meta-Llama-3-8B-Instruct",
@@ -80,4 +82,4 @@ if query:
         )
         result = chain.invoke(query)
         st.header("Answer")
-   
+        st.write(result)
