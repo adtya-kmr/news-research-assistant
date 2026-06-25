@@ -11,5 +11,3 @@ venv/
 .ipynb_checkpoints/
 
 faiss_store_hfai.pkl
-
-nvda_news_1.txt
