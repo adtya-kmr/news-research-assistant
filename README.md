@@ -2,6 +2,8 @@
 
 Streamlit app that loads news article URLs, builds a FAISS vector store, and answers questions using Meta Llama 3 via Hugging Face.
 
+![News Research Tool UI](assets/ui.png)
+
 ## Setup
 
 1. Create and activate a virtual environment:
