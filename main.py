@@ -29,12 +29,11 @@ load_dotenv()
 
 # Get Hugging Face API token
 # Streamlit Secrets (Cloud deployment)
-HF_TOKEN = st.secrets.get("HF_TOKEN")
+try:
+    HF_TOKEN = st.secrets["HF_TOKEN"]             # Streamlit Cloud
+except Exception:
+    pass
 
-# Stop execution if token is missing
-if not HF_TOKEN:
-    st.error("Hugging Face API token not found.")
-    st.stop()
 
 # ------------------------- INITIALIZE LLM -------------------------
 
