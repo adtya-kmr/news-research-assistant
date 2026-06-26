@@ -28,10 +28,8 @@ from langchain_community.vectorstores import FAISS
 load_dotenv()
 
 # Get Hugging Face API token
-# Priority:
-# 1. Streamlit Secrets (Cloud deployment)
-# 2. .env file (Local development)
-HF_TOKEN = st.secrets.get("HF_TOKEN", os.getenv("HF_TOKEN"))
+# Streamlit Secrets (Cloud deployment)
+HF_TOKEN = st.secrets.get("HF_TOKEN")
 
 # Stop execution if token is missing
 if not HF_TOKEN:
