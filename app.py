@@ -50,6 +50,12 @@ llm = ChatHuggingFace(llm=llm_endpoint)
 
 # ------------------------- STREAMLIT UI -------------------------
 
+st.set_page_config(
+    page_title="News Research Tool",
+    page_icon="📈",
+    layout="centered",
+)
+
 st.title("News Research Tool 📈")
 st.sidebar.title("News Article URLs")
 
